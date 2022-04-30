@@ -27,7 +27,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['chunee.db.elephantsql.com','127.0.0.1']
 
 
 # Application definition
@@ -91,8 +91,19 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': 'wghikjbr',
+
+        'USER': 'wghikjbr',
+
+        'PASSWORD': os.environ['DB_PASSWORD'],
+
+        'HOST': os.environ['SERVER_URL'],
+
+        'PORT': '5432',
+
     }
 }
 
