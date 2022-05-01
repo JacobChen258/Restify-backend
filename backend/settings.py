@@ -63,7 +63,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['http://localhost:3000/','https://restify-frontend.herokuapp.com/','https://www.restify-demo.com/']
+CORS_ALLOWED_ORIGINS = ['localhost:3000','https://restify-frontend.herokuapp.com/','https://www.restify-demo.com/']
 
 ROOT_URLCONF = 'backend.urls'
 
